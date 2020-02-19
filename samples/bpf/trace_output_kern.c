@@ -1,7 +1,7 @@
 #include <linux/ptrace.h>
 #include <linux/version.h>
 #include <uapi/linux/bpf.h>
-#include "bpf_helpers.h"
+#include <bpf/bpf_helpers.h>
 
 struct bpf_map_def SEC("maps") my_map = {
 	.type = BPF_MAP_TYPE_PERF_EVENT_ARRAY,
@@ -18,7 +18,6 @@ int bpf_prog1(struct pt_regs *ctx)
 		u64 cookie;
 	} data;
 
-	memset(&data, 0, sizeof(data));
 	data.pid = bpf_get_current_pid_tgid();
 	data.cookie = 0x12345678;
 

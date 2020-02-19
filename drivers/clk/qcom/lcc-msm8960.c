@@ -1,14 +1,6 @@
+// SPDX-License-Identifier: GPL-2.0-only
 /*
  * Copyright (c) 2014, The Linux Foundation. All rights reserved.
- *
- * This software is licensed under the terms of the GNU General Public
- * License version 2, as published by the Free Software Foundation, and
- * may be copied, distributed, and modified under those terms.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
  */
 
 #include <linux/kernel.h>
@@ -524,7 +516,6 @@ static const struct regmap_config lcc_msm8960_regmap_config = {
 	.val_bits	= 32,
 	.max_register	= 0xfc,
 	.fast_io	= true,
-	.val_format_endian = REGMAP_ENDIAN_LITTLE,
 };
 
 static const struct qcom_cc_desc lcc_msm8960_desc = {

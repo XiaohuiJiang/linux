@@ -263,7 +263,7 @@ spurious_8259A_irq:
 		static int spurious_irq_mask;
 		/*
 		 * At this point we can be sure the IRQ is spurious,
-		 * lets ACK and report it. [once per IRQ]
+		 * let's ACK and report it. [once per IRQ]
 		 */
 		if (!(spurious_irq_mask & irqmask)) {
 			printk(KERN_DEBUG
@@ -399,10 +399,10 @@ void __init sni_rm200_i8259_irqs(void)
 {
 	int i;
 
-	rm200_pic_master = ioremap_nocache(0x16000020, 4);
+	rm200_pic_master = ioremap(0x16000020, 4);
 	if (!rm200_pic_master)
 		return;
-	rm200_pic_slave = ioremap_nocache(0x160000a0, 4);
+	rm200_pic_slave = ioremap(0x160000a0, 4);
 	if (!rm200_pic_slave) {
 		iounmap(rm200_pic_master);
 		return;

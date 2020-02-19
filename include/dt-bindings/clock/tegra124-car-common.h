@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: GPL-2.0 */
 /*
  * This header provides constants for binding nvidia,tegra124-car or
  * nvidia,tegra132-car.
@@ -156,7 +157,7 @@
 /* 133 */
 /* 134 */
 /* 135 */
-/* 136 */
+#define TEGRA124_CLK_CEC 136
 /* 137 */
 /* 138 */
 /* 139 */
@@ -336,7 +337,8 @@
 #define TEGRA124_CLK_CLK_OUT_3_MUX 308
 /* 309 */
 /* 310 */
-#define TEGRA124_CLK_SOR0_LVDS 311
+#define TEGRA124_CLK_SOR0_LVDS 311 /* deprecated */
+#define TEGRA124_CLK_SOR0_OUT 311
 #define TEGRA124_CLK_XUSB_SS_DIV2 312
 
 #define TEGRA124_CLK_PLL_M_UD 313
